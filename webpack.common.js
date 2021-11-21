@@ -7,7 +7,8 @@ const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirStyles = path.join(__dirname, 'styles');
 const dirAssets = path.join(__dirname, 'assets');
-
+const { extendDefaultPlugins } = require("svgo");
+const CopyPlugin = require("copy-webpack-plugin");
 /**
  * Webpack Configuration
  */
@@ -34,25 +35,24 @@ module.exports = (env) => {
         title: 'Webpack Boilerplate',
         minify:  false 
       }),
-
-      new ImageMinimizerPlugin({
-        minimizerOptions: {
-          plugins: [
-            // SVGO options: "https://github.com/svg/svgo#what-it-can-do"
-            [
-              'imagemin-svgo',
-              {
-                plugins: [
-                  {
-                    removeViewBox: false,
-                    removeXMLNS: true,
-                  },
-                ],
-              },
-            ],
-          ],
-        },
-      }),
+      new CopyPlugin({
+        patterns: [
+          { from: "img", to: "img" },
+        ],
+      }), 
+      // new ImageMinimizerPlugin({
+      //   minimizerOptions: {
+      //     // Lossless optimization with custom option
+      //     // Feel free to experiment with options for better result for you
+      //     plugins: [
+      //       ["gifsicle", { interlaced: true }],
+      //       ["jpegtran", { progressive: true }],
+      //       ["optipng", { optimizationLevel: 5 }],
+      //       // Svgo configuration here https://github.com/svg/svgo#configuration
+          
+      //     ],
+      //   },
+      // }),
     ],
 
     module: {
@@ -110,15 +110,17 @@ module.exports = (env) => {
         },
 
         // IMAGES
-        {
-          test: /\.(png|jpe?g|gif)$/i,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-            },
-          },
-        },
+        // {
+        //   test: /\.(jpe?g|png|gif|svg)$/i,
+        //   use: [{
+        //     loader: 'file-loader',
+        //     options: {
+        //         name: '[name].[ext]',
+        //         outputPath: 'img/',
+        //         publicPath:'img/'
+        //     }  
+        //   }]
+        // },
 
         // SVG
         {

@@ -1,10 +1,6 @@
-/**
- * Application entry point
- */
+import Splide from '@splidejs/splide';
 
-// Load application styles
-//import 'scss/_index.scss';
+new Splide('.splide').mount();
 
-// ================================
-// START YOUR APP HERE
-// ================================
+
+

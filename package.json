@@ -17,6 +17,7 @@
     "url": "https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
   },
   "dependencies": {
+    "@splidejs/splide": "^3.6.0",
     "lodash": "4.17.21"
   },
   "devDependencies": {
@@ -25,11 +26,14 @@
     "@babel/preset-env": "7.16.4",
     "babel-loader": "8.2.3",
     "clean-webpack-plugin": "4.0.0",
-    "copy-webpack-plugin": "10.0.0",
+    "copy-webpack-plugin": "^10.0.0",
     "css-loader": "6.5.1",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "5.5.0",
     "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.0",
     "mini-css-extract-plugin": "^2.4.5",
     "node-sass": "6.0.1",
