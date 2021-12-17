@@ -1,0 +1,39 @@
+
+.main-content-cats {
+  .splide__pagination__page {
+    display:none;
+  }
+
+  & .cats-title {
+      font-size: 36px;
+      margin-top:10px;
+      margin-bottom:20px;
+      font-weight:normal;
+  }
+  
+  & .slider {
+    max-width: 1200px;
+    margin:0 auto;
+  }
+  
+ 
+  
+  & .splide li { 
+    height: 400px;
+  }
+
+  & .splide img {
+    width: 100%
+  }
+
+
+  & .cats {
+    ul {
+      display:flex;
+    }
+
+  }
+}
+
+
+
