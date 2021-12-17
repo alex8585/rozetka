@@ -11,10 +11,15 @@
     url("fonts/libre-baskerville-v5-latin-regular.woff2") format("woff2"),
     url("fonts/libre-baskerville-v5-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Work+Sans:wght@400;700;900&display=swap');
+
 
 //! set font variables
-$font-heading: "Libre-Baskerville-Reg", Fallback, "Georgia", serif;
-$font-body: sans-serif;
+
+$font-body: "Libre-Baskerville-Reg",'Roboto','Work Sans', BlinkMacSystemFont,-apple-system,Arial,"Segoe UI",Helvetica,sans-serif;
+$font-heading: "Libre-Baskerville-Reg",'Roboto', BlinkMacSystemFont,-apple-system,Arial,"Segoe UI",Helvetica,sans-serif;
+
+
 
 html {
   font-size: 62.5%; // 1rem = 10px, 3.5rem = 35px;
@@ -24,10 +29,13 @@ body {
   font-family: $font-body;
   font-size: 1.6rem;
   color: $black;
+  line-height: 1;
 }
 
-h1 {
-  font-family: $font-heading, serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
   font-size: 1.7rem;
-  font-weight: 400;
+  font-weight: 600;
 }
+
+

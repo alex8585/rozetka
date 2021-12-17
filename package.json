@@ -10,13 +10,15 @@
   },
   "scripts": {
     "dev": "webpack serve --progress --env dev --config webpack.dev.js",
-    "build": "webpack --progress --env prod --config webpack.prod.js"
+    "build": "webpack --progress --env prod --config webpack.prod.js",
+    "compile:sass": "node-sass resources/assets/scss/style.scss public/css/style.css -w"
   },
   "repository": {
     "type": "git",
     "url": "https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@splidejs/splide": "^3.6.0",
     "lodash": "4.17.21"
   },
@@ -29,6 +31,7 @@
     "copy-webpack-plugin": "^10.0.0",
     "css-loader": "6.5.1",
     "file-loader": "6.2.0",
+    "font-awesome": "^4.7.0",
     "html-webpack-plugin": "5.5.0",
     "image-minimizer-webpack-plugin": "^2.2.0",
     "imagemin-gifsicle": "^7.0.0",
@@ -44,6 +47,7 @@
     "webpack": "5.64.1",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.5.0",
+    "webpack-livereload-plugin": "^3.0.2",
     "webpack-merge": "5.8.0"
   }
 }

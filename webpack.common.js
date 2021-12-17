@@ -9,6 +9,16 @@ const dirStyles = path.join(__dirname, 'styles');
 const dirAssets = path.join(__dirname, 'assets');
 const { extendDefaultPlugins } = require("svgo");
 const CopyPlugin = require("copy-webpack-plugin");
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+const fs = require('fs')
+
+const pages =
+  fs
+    .readdirSync(__dirname)
+    .filter(fileName => fileName.endsWith('.ejs'))
+
+
+
 /**
  * Webpack Configuration
  */
@@ -27,17 +37,36 @@ module.exports = (env) => {
     },
 
     plugins: [
+      new LiveReloadPlugin(),
       new MiniCssExtractPlugin(),
       new webpack.DefinePlugin({ IS_DEV }),
+      
+      // ...pages.map(page => new HtmlWebpackPlugin({
+      //    template: path.join(__dirname, page),
+      //    filename: page,
+      //    minify:false
+      // })),
 
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'index.ejs'),
+         filename: 'index',
         title: 'Webpack Boilerplate',
         minify:  false 
       }),
+      
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, 'categories.ejs'),
+         filename: 'cats',
+        title: 'Webpack Boilerplate',
+        minify:  false 
+      }),
+
+      
       new CopyPlugin({
         patterns: [
           { from: "img", to: "img" },
+          { from: "fonts", to: "fonts" },
+          { from: "assets",},
         ],
       }), 
       // new ImageMinimizerPlugin({

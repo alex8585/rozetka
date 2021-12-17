@@ -1,0 +1,108 @@
+.header {
+  background-color: $black;
+}
+
+.header-layout {
+  color: $white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 72px;
+}
+
+.header-layout a {
+  color: $white;
+  text-decoration: none;
+}
+
+.header-layout>* {
+  margin-right: 20px;
+}
+
+.header-layout button {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 16px;
+  height: 40px;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $white;
+}
+
+.header-layout button.gray-btn {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $dark-grey;
+}
+
+.header-layout button.green-btn {
+  background-color: $green;
+  border-radius: 0 3px 3px 0;
+  padding: 0px 15px;
+}
+
+.header-layout button> :nth-child(2) {
+  margin-left: 12px;
+}
+
+.header-layout svg {
+  width: 24px;
+  height: 24px;
+  fill: $white;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.search-form__input-wrapper {
+  height: 100%;
+}
+
+.search-form__inner input {
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%234E4C4C' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M10 2a8 8 0 104.906 14.32l5.387 5.387a1 1 0 001.414-1.414l-5.387-5.387A8 8 0 0010 2zm-6 8a6 6 0 1112 0 6 6 0 01-12 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 12px;
+  border: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-radius: 3px 0 0 3px;
+  border-radius: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+.search-form__inner {
+  width: 100%;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+}
+
+.lang {
+  display: flex;
+}
+
+.lang div {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.lang div:nth-child(2) {
+  border-left: 1px solid #797878;
+}
+
+.lang div.acative a {
+  color: #797878;
+}

@@ -1,0 +1,103 @@
+main.main-content {
+    /* border-left: 1px solid #e9e9e9; */
+    border-left: 1px solid $light-grey;
+    ;
+    padding-left: 40px;
+    padding-top: 40px;
+    width: calc(100% - 300px);
+}
+
+main.main-content .splide li {
+    height: 400px;
+}
+
+main.main-content .splide img {
+    width: 100%
+}
+
+main.main-content .products h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: $black;
+}
+
+.products-loop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    width: 16.66%;
+    border-right: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    & button {
+        top: 15px;
+        right: 25px;
+        position: absolute;
+        border: none;
+        transition: all .2s ease;
+        color: #ffa900;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+
+    }
+
+    & .picture {
+        padding-top: 20px;
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+    }
+
+    & img {
+        max-height: 140px;
+        max-width: 100%;
+
+    }
+
+    & .title {
+    display: block;
+    height: 40px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    font-size: 14px;
+    color: $black-soft;
+    text-decoration: none;
+    line-height: 19.6px
+  }
+
+  & .title:hover {
+
+    color: #f84147;
+    text-decoration: underline;
+  }
+  
+  & .prices {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  
+}
+
+
+.product-card .title:hover {
+    text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+
+
+

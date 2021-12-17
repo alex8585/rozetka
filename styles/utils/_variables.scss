@@ -2,18 +2,18 @@
 
 $white: #fff;
 
-$light-grey: #fafafa;
+$light-grey: #d4cdcd;
 $grey: #d7d7d7;
+$dark-grey: hsla(0, 0%, 100%, .2);
 
-$black-soft: #444;
-$black: #09090e;
 
-$blue: #2c638f;
+
+$black-soft: #333;
+$black: #221f1f;
+
+$blue: rgb(62, 119, 170);
 $pink: #fff0f5;
 $yellow: #fffacd;
 
-//? override for project clarity
 
-$color-primary: $blue;
-$color-secondary: $pink;
-$color-tertiary: $yellow;
+$green:#00a046;
