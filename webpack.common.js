@@ -49,14 +49,21 @@ module.exports = (env) => {
 
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'index.ejs'),
-         filename: 'index.html',
+        filename: 'index.html',
         title: 'Webpack Boilerplate',
         minify:  false 
       }),
       
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'categories.ejs'),
-         filename: 'cats.html',
+        filename: 'cats.html',
+        title: 'Webpack Boilerplate',
+        minify:  false 
+      }),
+      
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, 'category.ejs'),
+        filename: 'cat.html',
         title: 'Webpack Boilerplate',
         minify:  false 
       }),
